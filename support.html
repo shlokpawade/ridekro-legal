@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support Center – Ridekro</title>
+  <meta name="description" content="Get help with your Ridekro rides, account, payments, or driver queries. Contact our support team or browse our FAQ." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Ridekro Technologies" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Support Center – Ridekro" />
+  <meta property="og:description" content="Get help with rides, payments, accounts, and more. Ridekro support responds within 24 hours." />
+  <meta property="og:url" content="https://ridekro.in/support.html" />
+  <meta property="og:site_name" content="Ridekro" />
+
+  <link rel="canonical" href="https://ridekro.in/support.html" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    .support-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 3rem;
+    }
+
+    .issue-form {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+    }
+
+    .issue-form h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+
+    .issue-form p {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.1rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 0.4rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      background: var(--navy-light);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 0.7rem 0.9rem;
+      color: var(--text-primary);
+      font-size: 0.9rem;
+      font-family: var(--font);
+      transition: var(--transition);
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--green);
+      box-shadow: 0 0 0 3px rgba(0, 200, 83, 0.1);
+    }
+
+    .form-group select option {
+      background: var(--navy-light);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 110px;
+    }
+
+    .form-note {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.75rem;
+    }
+
+    .business-section {
+      background: linear-gradient(135deg, var(--navy-light) 0%, var(--card-bg) 100%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .business-section h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.75rem;
+    }
+
+    .business-section p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+    }
+
+    .business-points {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .business-points li {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .business-points li::before {
+      content: '✓';
+      color: var(--green);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 640px) {
+      .business-section {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Ridekro Home">
+        <div class="nav-logo-icon" aria-hidden="true">R</div>
+        <span class="nav-logo-text">Ride<span>kro</span></span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="privacy-policy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="support.html" class="active">Support</a></li>
+        <li><a href="delete-account.html">Delete Account</a></li>
+      </ul>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="navMobile" role="menu">
+      <a href="index.html" role="menuitem">Home</a>
+      <a href="privacy-policy.html" role="menuitem">Privacy Policy</a>
+      <a href="terms.html" role="menuitem">Terms of Service</a>
+      <a href="support.html" role="menuitem">Support</a>
+      <a href="delete-account.html" role="menuitem">Delete Account</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero" aria-labelledby="page-title">
+    <div class="container">
+      <div class="page-hero-icon" aria-hidden="true">🎧</div>
+      <h1 id="page-title">Support Center</h1>
+      <p>We're here to help. Reach out for ride issues, account queries, payment problems, or anything else.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT CARDS -->
+  <section class="section" aria-labelledby="contact-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Get in Touch</span>
+        <h2 id="contact-heading">How Can We Help?</h2>
+        <p>Choose the best way to reach us based on your issue.</p>
+      </div>
+      <div class="support-grid">
+        <div class="contact-card">
+          <div class="contact-icon" aria-hidden="true">📧</div>
+          <h3>Email Support</h3>
+          <p>For ride issues, account problems, payment disputes, and general queries.</p>
+          <a href="mailto:pawadeshlok@gmail.com" class="btn btn-primary" style="width:100%;justify-content:center;">pawadeshlok@gmail.com</a>
+          <div class="response-time">Response within 24 hours</div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon" aria-hidden="true">🚨</div>
+          <h3>Safety &amp; Urgent Issues</h3>
+          <p>For safety incidents, harassment reports, or urgent account security concerns.</p>
+          <a href="mailto:pawadeshlok@gmail.com?subject=URGENT%3A%20Safety%20Issue" class="btn btn-outline" style="width:100%;justify-content:center;">Report Urgent Issue</a>
+          <div class="response-time">Priority — within 4 hours</div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon" aria-hidden="true">🗑️</div>
+          <h3>Account Deletion</h3>
+          <p>Request permanent deletion of your Ridekro account and all associated data.</p>
+          <a href="delete-account.html" class="btn btn-ghost" style="width:100%;justify-content:center;">Delete My Account</a>
+          <div class="response-time">Processed within 30 days</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ISSUE REPORTING FORM -->
+  <section class="section section-alt" aria-labelledby="report-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Report an Issue</span>
+        <h2 id="report-heading">Tell Us What Happened</h2>
+        <p>Fill in the details below and email us. Include your ride ID if applicable.</p>
+      </div>
+      <div style="max-width: 640px; margin: 0 auto;">
+        <div class="issue-form">
+          <h3>Issue Report Template</h3>
+          <p>Copy the template below and send it to <a href="mailto:pawadeshlok@gmail.com">pawadeshlok@gmail.com</a> — or just email us directly with your details.</p>
+
+          <div class="form-group">
+            <label for="issueType">Issue Category</label>
+            <select id="issueType" aria-label="Select issue category">
+              <option value="">Select a category...</option>
+              <option>Ride Problem (wrong route, driver behaviour)</option>
+              <option>Payment Issue (overcharge, refund request)</option>
+              <option>Account Problem (login, OTP, suspension)</option>
+              <option>Driver Registration / Documents</option>
+              <option>Safety Incident</option>
+              <option>App Bug or Technical Issue</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="highlight-box" style="margin-top: 0.5rem;">
+            <strong>Email us at:</strong> <a href="mailto:pawadeshlok@gmail.com">pawadeshlok@gmail.com</a><br />
+            <strong>Subject line:</strong> [Issue Type] – Your Name – Ride ID (if applicable)<br /><br />
+            Include in your email:
+            <ul style="margin-top: 0.5rem; padding-left: 1.25rem;">
+              <li>Your registered phone number</li>
+              <li>Ride ID or date of the ride</li>
+              <li>Description of the issue</li>
+              <li>Any screenshots or evidence</li>
+            </ul>
+          </div>
+
+          <a href="mailto:pawadeshlok@gmail.com?subject=Support%20Request%20-%20Ridekro" class="btn btn-primary mt-3" style="width:100%;justify-content:center;">
+            📧 Send Email to Support
+          </a>
+          <p class="form-note">We respond to all support emails within 24 hours on business days (Monday–Saturday, 9 AM – 6 PM IST).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUSINESS INQUIRY -->
+  <section class="section" id="business" aria-labelledby="business-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Partnerships</span>
+        <h2 id="business-heading">Business Inquiries</h2>
+      </div>
+      <div class="business-section">
+        <div>
+          <h3>Partner with Ridekro</h3>
+          <p>
+            We're open to partnerships with fleet operators, local businesses, corporate travel programs, and technology partners who share our vision of making local mobility smarter and more accessible across India.
+          </p>
+          <ul class="business-points">
+            <li>Fleet operator partnerships</li>
+            <li>Corporate ride programs</li>
+            <li>City expansion collaborations</li>
+            <li>Technology integrations</li>
+            <li>Media and press inquiries</li>
+          </ul>
+        </div>
+        <div>
+          <div class="contact-card" style="text-align:left;">
+            <div class="contact-icon" aria-hidden="true">💼</div>
+            <h3>Get in Touch</h3>
+            <p>Send us a brief introduction about your organisation and the nature of your inquiry.</p>
+            <a href="mailto:pawadeshlok@gmail.com?subject=Business%20Inquiry%20-%20Ridekro" class="btn btn-primary" style="width:100%;justify-content:center;">
+              Send Business Inquiry
+            </a>
+            <div class="response-time" style="margin-top: 0.75rem;">Response within 48 hours</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-alt" id="faq" aria-labelledby="faq-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">FAQ</span>
+        <h2 id="faq-heading">Frequently Asked Questions</h2>
+        <p>Quick answers to the most common questions from riders and drivers.</p>
+      </div>
+
+      <div style="max-width: 720px; margin: 0 auto;">
+
+        <p style="font-size: 0.8rem; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 1rem;">For Riders</p>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            How do I book a ride on Ridekro?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            Open the Ridekro app, enter your pickup and drop-off location, choose your ride type, and tap "Book Ride". A nearby driver will accept your request and you'll see their live location on the map.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            How is the fare calculated?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            Fares are calculated based on the distance of your ride, estimated travel time, and vehicle type. During high-demand periods, surge pricing may apply — this will always be shown clearly before you confirm your booking.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            What payment methods are accepted?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            Ridekro accepts UPI, debit and credit cards, net banking, and popular digital wallets through Razorpay. Cash payments may be available in select areas as shown in the app.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            How do I get a refund for a cancelled or problematic ride?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            Email us at <a href="mailto:pawadeshlok@gmail.com">pawadeshlok@gmail.com</a> with your ride ID and a description of the issue within 7 days of the ride. Eligible refunds are processed within 5–7 business days to your original payment method.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            I didn't receive an OTP. What should I do?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            Wait 60 seconds and tap "Resend OTP". Ensure your phone has network coverage. If the issue persists, check that you've entered the correct phone number. Contact support if you continue to face issues.
+          </div>
+        </div>
+
+        <p style="font-size: 0.8rem; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: 0.8px; margin: 1.75rem 0 1rem;">For Drivers</p>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            How do I register as a driver on Ridekro?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            Download the Ridekro app, open it, and select <strong>"I'm a Driver"</strong> at the sign-in screen. Register with your phone number and complete the document upload process — including your driving licence and a government-issued ID. Our team will verify your documents and activate your account within 2–3 business days.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            How does the commission system work?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            Ridekro charges a platform commission on each completed ride. The commission percentage is shown during driver onboarding. Your net earnings (fare minus commission) are visible in your Driver Dashboard and paid out to your registered bank account.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            When and how do I receive my earnings?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            Earnings are processed via bank transfer to your registered account. Payout schedules and minimum withdrawal amounts are shown in the <strong>Driver section</strong> of the app. Ensure your bank details are accurate to avoid delays.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            My account has been suspended. What do I do?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            Email <a href="mailto:pawadeshlok@gmail.com">pawadeshlok@gmail.com</a> with the subject "Account Suspension Appeal" within 14 days of suspension. Include your registered phone number and a brief explanation. We'll review and respond within 7 business days.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            How do I update my vehicle or document details?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            You can update your documents through the profile section in the Ridekro app. For major changes (vehicle change, licence renewal), email <a href="mailto:pawadeshlok@gmail.com">pawadeshlok@gmail.com</a> with the updated documents attached.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- RESPONSE TIMES -->
+  <section class="section" aria-labelledby="response-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Our Commitment</span>
+        <h2 id="response-heading">Expected Response Times</h2>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-icon" aria-hidden="true">⚡</div>
+          <h3>Safety &amp; Urgent Issues</h3>
+          <p>Safety incidents, harassment, or account security threats are treated as highest priority.</p>
+          <span class="tag">Within 4 hours</span>
+        </div>
+        <div class="card">
+          <div class="card-icon" aria-hidden="true">💳</div>
+          <h3>Payment Disputes</h3>
+          <p>Overcharges, refund requests, and payment failures are reviewed promptly.</p>
+          <span class="tag">Within 24 hours</span>
+        </div>
+        <div class="card">
+          <div class="card-icon" aria-hidden="true">📧</div>
+          <h3>General Support</h3>
+          <p>Account queries, ride feedback, app issues, and general questions.</p>
+          <span class="tag">Within 24–48 hours</span>
+        </div>
+      </div>
+      <p class="text-center text-muted mt-3" style="font-size: 0.85rem;">
+        Support hours: Monday – Saturday, 9:00 AM – 6:00 PM IST. Urgent safety issues are monitored 7 days a week.
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" aria-label="Ridekro Home">
+            <div class="nav-logo-icon" aria-hidden="true">R</div>
+            <span class="nav-logo-text">Ride<span>kro</span></span>
+          </a>
+          <p>India's trusted local ride booking platform. Connecting riders and drivers for safe, affordable journeys.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html">About Ridekro</a></li>
+            <li><a href="support.html">Contact Us</a></li>
+            <li><a href="support.html#business">Business Inquiry</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="delete-account.html">Delete Account</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="support.html">Help Center</a></li>
+            <li><a href="support.html#faq">FAQ</a></li>
+            <li><a href="mailto:pawadeshlok@gmail.com">pawadeshlok@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Ridekro Technologies. All rights reserved. Made with ❤️ in India.</p>
+        <div class="footer-bottom-links">
+          <a href="privacy-policy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="support.html">Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

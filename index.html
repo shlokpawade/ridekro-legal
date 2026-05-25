@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ridekro – Smart Rides, Anytime | India's Local Ride Platform</title>
+  <meta name="description" content="Ridekro connects riders with trusted auto-rickshaw and local ride drivers across India. Fast, safe, and affordable rides at your fingertips." />
+  <meta name="keywords" content="Ridekro, auto rickshaw booking, ride booking India, local rides, auto booking app" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Ridekro Technologies" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ridekro – Smart Rides, Anytime" />
+  <meta property="og:description" content="India's trusted local ride booking platform. Book auto-rickshaws and local rides instantly." />
+  <meta property="og:url" content="https://ridekro.in" />
+  <meta property="og:site_name" content="Ridekro" />
+  <meta property="og:image" content="https://ridekro.in/og-image.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ridekro – Smart Rides, Anytime" />
+  <meta name="twitter:description" content="India's trusted local ride booking platform." />
+
+  <link rel="canonical" href="https://ridekro.in/" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    /* Index-specific styles */
+    .hero-cta-group {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      margin-top: 3.5rem;
+      flex-wrap: wrap;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-item .stat-num {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--white);
+      display: block;
+    }
+
+    .stat-item .stat-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .features-section {
+      padding: 5rem 1.5rem;
+    }
+
+    .legal-links-section {
+      padding: 4rem 1.5rem;
+      background: var(--navy-light);
+    }
+
+    .legal-link-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .legal-link-card:hover {
+      border-color: rgba(0, 200, 83, 0.35);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+      text-decoration: none;
+    }
+
+    .legal-link-card .llc-icon {
+      font-size: 1.75rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .legal-link-card .llc-body h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.3rem;
+    }
+
+    .legal-link-card .llc-body p {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    .legal-link-card .llc-arrow {
+      margin-left: auto;
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      align-self: center;
+      transition: var(--transition);
+    }
+
+    .legal-link-card:hover .llc-arrow {
+      color: var(--green);
+      transform: translateX(3px);
+    }
+
+    .trust-section {
+      padding: 4rem 1.5rem;
+    }
+
+    .trust-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1rem 1.25rem;
+    }
+
+    .trust-badge .tb-icon {
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .trust-badge .tb-text {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    .trust-badge .tb-text strong {
+      color: var(--white);
+      display: block;
+      font-size: 0.9rem;
+    }
+
+    .app-cta-section {
+      padding: 5rem 1.5rem;
+      text-align: center;
+      background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy) 100%);
+      border-top: 1px solid var(--border);
+    }
+
+    .app-cta-section h2 {
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 1rem;
+    }
+
+    .app-cta-section p {
+      color: var(--text-secondary);
+      max-width: 480px;
+      margin: 0 auto 2rem;
+    }
+
+    .store-badges {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .store-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--card-bg);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 0.75rem 1.25rem;
+      color: var(--white);
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .store-badge:hover {
+      border-color: var(--green);
+      color: var(--green);
+      text-decoration: none;
+    }
+
+    .store-badge .sb-icon {
+      font-size: 1.3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Ridekro Home">
+        <div class="nav-logo-icon" aria-hidden="true">R</div>
+        <span class="nav-logo-text">Ride<span>kro</span></span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="privacy-policy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="delete-account.html">Delete Account</a></li>
+      </ul>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="navMobile" role="menu">
+      <a href="index.html" role="menuitem">Home</a>
+      <a href="privacy-policy.html" role="menuitem">Privacy Policy</a>
+      <a href="terms.html" role="menuitem">Terms of Service</a>
+      <a href="support.html" role="menuitem">Support</a>
+      <a href="delete-account.html" role="menuitem">Delete Account</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="container">
+      <div class="hero-badge" aria-label="Status">
+        <span>🚀</span> Now available on Android
+      </div>
+      <h1 id="hero-heading">
+        Smart Rides,<br /><span class="highlight">Anytime. Anywhere.</span>
+      </h1>
+      <p>
+        Ridekro connects you with trusted auto-rickshaw and local ride drivers across India.
+        Fast booking, transparent fares, and real-time tracking — all in one app.
+      </p>
+      <div class="hero-cta-group">
+        <a href="support.html" class="btn btn-primary">Get Support</a>
+        <a href="privacy-policy.html" class="btn btn-ghost">Legal &amp; Privacy</a>
+      </div>
+      <div class="hero-stats" role="list" aria-label="Platform statistics">
+        <div class="stat-item" role="listitem">
+          <span class="stat-num">10K+</span>
+          <span class="stat-label">Rides Completed</span>
+        </div>
+        <div class="stat-item" role="listitem">
+          <span class="stat-num">500+</span>
+          <span class="stat-label">Active Drivers</span>
+        </div>
+        <div class="stat-item" role="listitem">
+          <span class="stat-num">4.7★</span>
+          <span class="stat-label">Avg. Rating</span>
+        </div>
+        <div class="stat-item" role="listitem">
+          <span class="stat-num">India</span>
+          <span class="stat-label">Based &amp; Built</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features-section" aria-labelledby="features-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Why Ridekro</span>
+        <h2 id="features-heading">Built for India's Roads</h2>
+        <p>Everything you need for a safe, reliable, and affordable ride experience.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-icon" aria-hidden="true">📍</div>
+          <h3>Real-Time Tracking</h3>
+          <p>Track your driver live on the map from pickup to drop. Share your ride status with family for added safety.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon" aria-hidden="true">🔒</div>
+          <h3>OTP-Verified Rides</h3>
+          <p>Every ride starts with a secure OTP confirmation. Your safety is our top priority, every single trip.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon" aria-hidden="true">💳</div>
+          <h3>Secure Payments</h3>
+          <p>Pay seamlessly via Razorpay — UPI, cards, wallets all supported. Transparent fare breakdown, no hidden charges.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon" aria-hidden="true">🛺</div>
+          <h3>Auto-Rickshaw First</h3>
+          <p>Designed specifically for India's most popular last-mile transport. Affordable, quick, and always available.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon" aria-hidden="true">⭐</div>
+          <h3>Verified Drivers</h3>
+          <p>All drivers go through document verification and background checks before they can accept rides on Ridekro.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon" aria-hidden="true">📱</div>
+          <h3>One App, Two Modes</h3>
+          <p>Riders and drivers use the same app. At sign-in, simply choose your role — switch anytime from your profile.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEGAL LINKS -->
+  <section class="legal-links-section" aria-labelledby="legal-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Transparency</span>
+        <h2 id="legal-heading">Legal &amp; Compliance</h2>
+        <p>We believe in full transparency. Read our policies to understand how we handle your data and what governs your use of Ridekro.</p>
+      </div>
+      <div class="grid-2">
+        <a href="privacy-policy.html" class="legal-link-card" aria-label="Read Privacy Policy">
+          <div class="llc-icon" aria-hidden="true">🔐</div>
+          <div class="llc-body">
+            <h3>Privacy Policy</h3>
+            <p>How we collect, use, and protect your personal data including location, phone number, and ride history.</p>
+          </div>
+          <span class="llc-arrow" aria-hidden="true">→</span>
+        </a>
+        <a href="terms.html" class="legal-link-card" aria-label="Read Terms of Service">
+          <div class="llc-icon" aria-hidden="true">📋</div>
+          <div class="llc-body">
+            <h3>Terms of Service</h3>
+            <p>Rules governing rider and driver responsibilities, payments, disputes, and platform usage.</p>
+          </div>
+          <span class="llc-arrow" aria-hidden="true">→</span>
+        </a>
+        <a href="support.html" class="legal-link-card" aria-label="Go to Support">
+          <div class="llc-icon" aria-hidden="true">🎧</div>
+          <div class="llc-body">
+            <h3>Support Center</h3>
+            <p>Get help with your rides, account issues, payments, or driver queries. We respond within 24 hours.</p>
+          </div>
+          <span class="llc-arrow" aria-hidden="true">→</span>
+        </a>
+        <a href="delete-account.html" class="legal-link-card" aria-label="Delete Account">
+          <div class="llc-icon" aria-hidden="true">🗑️</div>
+          <div class="llc-body">
+            <h3>Delete My Account</h3>
+            <p>Request permanent deletion of your Ridekro account and all associated personal data.</p>
+          </div>
+          <span class="llc-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST SIGNALS -->
+  <section class="trust-section" aria-labelledby="trust-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Trust &amp; Safety</span>
+        <h2 id="trust-heading">Your Safety is Our Foundation</h2>
+      </div>
+      <div class="grid-4">
+        <div class="trust-badge">
+          <div class="tb-icon" aria-hidden="true">🇮🇳</div>
+          <div class="tb-text">
+            <strong>India-Based Company</strong>
+            Ridekro Technologies, registered in India
+          </div>
+        </div>
+        <div class="trust-badge">
+          <div class="tb-icon" aria-hidden="true">🔒</div>
+          <div class="tb-text">
+            <strong>Data Encrypted</strong>
+            All data secured via Supabase &amp; TLS
+          </div>
+        </div>
+        <div class="trust-badge">
+          <div class="tb-icon" aria-hidden="true">💳</div>
+          <div class="tb-text">
+            <strong>Razorpay Payments</strong>
+            PCI-DSS compliant payment processing
+          </div>
+        </div>
+        <div class="trust-badge">
+          <div class="tb-icon" aria-hidden="true">📞</div>
+          <div class="tb-text">
+            <strong>24hr Support</strong>
+            Reach us at pawadeshlok@gmail.com
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APP CTA -->
+  <section class="app-cta-section" aria-labelledby="cta-heading">
+    <div class="container">
+      <h2 id="cta-heading">Ready to Ride?</h2>
+      <p>Download the Ridekro app and book your first ride in under 60 seconds.</p>
+      <div class="store-badges">
+        <a href="#" class="store-badge" aria-label="Get it on Google Play">
+          <span class="sb-icon" aria-hidden="true">▶</span>
+          <span>Google Play<br /><small style="font-weight:400;color:var(--text-muted)">Coming Soon</small></span>
+        </a>
+        <a href="support.html" class="store-badge" aria-label="Contact Support">
+          <span class="sb-icon" aria-hidden="true">🎧</span>
+          <span>Contact Support</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" aria-label="Ridekro Home">
+            <div class="nav-logo-icon" aria-hidden="true">R</div>
+            <span class="nav-logo-text">Ride<span>kro</span></span>
+          </a>
+          <p>India's trusted local ride booking platform. Connecting riders and drivers for safe, affordable journeys.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html">About Ridekro</a></li>
+            <li><a href="support.html">Contact Us</a></li>
+            <li><a href="support.html#business">Business Inquiry</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="delete-account.html">Delete Account</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="support.html">Help Center</a></li>
+            <li><a href="support.html#faq">FAQ</a></li>
+            <li><a href="mailto:pawadeshlok@gmail.com">pawadeshlok@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Ridekro Technologies. All rights reserved. Made with ❤️ in India.</p>
+        <div class="footer-bottom-links">
+          <a href="privacy-policy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="support.html">Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

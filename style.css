@@ -14,24 +14,16 @@
   --hairline-soft: #e5e5e5;
   --sale: #d30005;
   --success: #007d48;
-  --navy: #ffffff;
-  --navy-light: #f5f5f5;
-  --navy-mid: #e5e5e5;
-  --green: #111111;
-  --green-light: #111111;
-  --green-muted: #f5f5f5;
   --white: #ffffff;
   --off-white: #f5f5f5;
   --text-primary: #111111;
   --text-secondary: #4b4b4d;
   --text-dark: #111111;
   --text-muted: #707072;
-  --border: #cacacb;
-  --card-bg: #ffffff;
   --shadow: none;
   --shadow-sm: none;
   --radius: 0px;
-  --radius-sm: 24px;
+  --radius-sm: 0px;
   --transition: all 0.2s ease;
   --font: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
   --font-display: 'Bebas Neue', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -965,7 +957,7 @@ a:hover {
   margin: 2rem 0;
 }
 
-.text-success, .text-green { color: var(--success); }
+.text-success { color: var(--success); }
 .text-muted { color: var(--text-muted); }
 .text-white { color: var(--canvas); }
 .text-center { text-align: center; }

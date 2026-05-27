@@ -1,5 +1,5 @@
 /* ============================================
-   Ridekro Legal Pages - Shared Scripts
+   Ridekro – Shared Scripts
    ============================================ */
 
 (function () {
@@ -7,21 +7,25 @@
 
   // ── Mobile Nav Toggle ──────────────────────
   function initMobileNav() {
-    const hamburger = document.getElementById('navHamburger');
-    const mobileMenu = document.getElementById('navMobile');
+    var hamburger = document.getElementById('navHamburger');
+    var mobileMenu = document.getElementById('navMobile');
     if (!hamburger || !mobileMenu) return;
 
     hamburger.addEventListener('click', function () {
-      const isOpen = mobileMenu.classList.toggle('open');
-      hamburger.setAttribute('aria-expanded', isOpen);
-      hamburger.querySelectorAll('span').forEach(function (bar, i) {
-        bar.style.opacity = isOpen && i === 1 ? '0' : '1';
-        if (i === 0) bar.style.transform = isOpen ? 'translateY(7px) rotate(45deg)' : '';
-        if (i === 2) bar.style.transform = isOpen ? 'translateY(-7px) rotate(-45deg)' : '';
-      });
+      var isOpen = mobileMenu.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', String(isOpen));
+      var bars = hamburger.querySelectorAll('span');
+      if (isOpen) {
+        bars[0].style.transform = 'translateY(6.5px) rotate(45deg)';
+        bars[1].style.opacity = '0';
+        bars[2].style.transform = 'translateY(-6.5px) rotate(-45deg)';
+      } else {
+        bars[0].style.transform = '';
+        bars[1].style.opacity = '1';
+        bars[2].style.transform = '';
+      }
     });
 
-    // Close on outside click
     document.addEventListener('click', function (e) {
       if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
         mobileMenu.classList.remove('open');
@@ -42,10 +46,15 @@
       if (!btn) return;
       btn.addEventListener('click', function () {
         var isOpen = item.classList.contains('open');
-        // Close all
-        items.forEach(function (i) { i.classList.remove('open'); });
-        // Toggle current
-        if (!isOpen) item.classList.add('open');
+        items.forEach(function (i) {
+          i.classList.remove('open');
+          var q = i.querySelector('.faq-question');
+          if (q) q.setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
       });
     });
   }
@@ -53,8 +62,8 @@
   // ── Active Nav Link ────────────────────────
   function setActiveNav() {
     var path = window.location.pathname.split('/').pop() || 'index.html';
-    var links = document.querySelectorAll('.nav-links a, .nav-mobile a');
-    links.forEach(function (link) {
+    document.querySelectorAll('.nav-links a, .nav-mobile a').forEach(function (link) {
+      link.classList.remove('active');
       var href = link.getAttribute('href');
       if (href === path || (path === '' && href === 'index.html')) {
         link.classList.add('active');

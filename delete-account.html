@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <style>
     .steps-list {
@@ -35,8 +35,8 @@
       display: flex;
       align-items: flex-start;
       gap: 1rem;
-      background: var(--canvas);
-      border: 1px solid var(--hairline);
+      background: var(--card-bg);
+      border: 1px solid var(--border);
       border-radius: var(--radius-sm);
       padding: 1.1rem 1.25rem;
     }
@@ -49,9 +49,9 @@
       width: 30px;
       height: 30px;
       min-width: 30px;
-      background: var(--soft-cloud);
-      border: 1px solid var(--hairline);
-      color: var(--ink);
+      background: var(--green-muted);
+      border: 1px solid rgba(0, 200, 83, 0.3);
+      color: var(--green);
       font-size: 0.8rem;
       font-weight: 700;
       border-radius: 50%;
@@ -78,7 +78,7 @@
     }
 
     .retention-table th {
-      background: var(--soft-cloud);
+      background: var(--navy-light);
       color: var(--text-secondary);
       font-weight: 600;
       font-size: 0.8rem;
@@ -86,13 +86,13 @@
       letter-spacing: 0.5px;
       padding: 0.75rem 1rem;
       text-align: left;
-      border-bottom: 1px solid var(--hairline);
+      border-bottom: 1px solid var(--border);
     }
 
     .retention-table td {
       padding: 0.85rem 1rem;
       color: var(--text-secondary);
-      border-bottom: 1px solid var(--hairline);
+      border-bottom: 1px solid var(--border);
       vertical-align: top;
     }
 
@@ -118,8 +118,8 @@
     }
 
     .delete-cta-box {
-      background: linear-gradient(135deg, var(--canvas) 0%, var(--soft-cloud) 100%);
-      border: 1px solid var(--hairline);
+      background: linear-gradient(135deg, var(--card-bg) 0%, var(--navy-light) 100%);
+      border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: 2.5rem;
       text-align: center;
@@ -141,8 +141,8 @@
     }
 
     .email-template {
-      background: var(--soft-cloud);
-      border: 1px solid var(--hairline);
+      background: var(--navy);
+      border: 1px solid var(--border);
       border-radius: var(--radius-sm);
       padding: 1.25rem;
       text-align: left;
@@ -154,7 +154,7 @@
     }
 
     .email-template .et-label {
-      color: var(--ink);
+      color: var(--green);
       font-weight: 600;
     }
   </style>

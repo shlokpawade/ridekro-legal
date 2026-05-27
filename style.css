@@ -965,7 +965,7 @@ a:hover {
   margin: 2rem 0;
 }
 
-.text-green { color: var(--success); }
+.text-success, .text-green { color: var(--success); }
 .text-muted { color: var(--text-muted); }
 .text-white { color: var(--canvas); }
 .text-center { text-align: center; }

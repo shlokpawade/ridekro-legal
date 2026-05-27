@@ -264,11 +264,11 @@ a:hover {
   font-family: var(--font-display);
   text-transform: uppercase;
   letter-spacing: 0.02em;
-  line-height: 0.92;
+  line-height: 1;
 }
 
 .hero h1 {
-  font-size: clamp(4rem, 14vw, 8rem);
+  font-size: clamp(3.75rem, 12vw, 6.75rem);
   margin: 1.2rem 0 1rem;
 }
 
@@ -317,7 +317,7 @@ a:hover {
 }
 
 .page-hero h1 {
-  font-size: clamp(3rem, 9vw, 5rem);
+  font-size: clamp(2.8rem, 8vw, 4.5rem);
   margin-bottom: 0.75rem;
 }
 
